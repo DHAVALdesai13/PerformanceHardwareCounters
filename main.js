@@ -14,10 +14,11 @@ function createWindow() {
   //          win.webContents.executeJavaScript("initial_draw('" + file_path + "')");
   //      });
   //  }
-    let file_path = 'bperf_output.csv';
-    win.webContents.on("did-finish-load", () => {
-    win.webContents.executeJavaScript("initial_draw('" + file_path + "')");
+      let file_path = 'bperf_output.csv';
+      win.webContents.on("did-finish-load", () => {
+      win.webContents.executeJavaScript("initial_draw('" + file_path + "')");
         });
+
     win.maximize();
     //win.webContents.openDevTools();
 }
