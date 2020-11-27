@@ -8,12 +8,16 @@ function createWindow() {
         }
     });
     win.loadFile("index.html");
-    if (process.argv.length >= 3) {
-        let file_path = path.resolve(process.argv[2]);
-        win.webContents.on("did-finish-load", () => {
-            win.webContents.executeJavaScript("initial_draw('" + file_path + "')");
+  //  if (process.argv.length >= 3) {
+  //      let file_path = path.resolve(process.argv[2]);
+  //      win.webContents.on("did-finish-load", () => {
+  //          win.webContents.executeJavaScript("initial_draw('" + file_path + "')");
+  //      });
+  //  }
+    let file_path = 'bperf_output.csv';
+    win.webContents.on("did-finish-load", () => {
+    win.webContents.executeJavaScript("initial_draw('" + file_path + "')");
         });
-    }
     win.maximize();
     //win.webContents.openDevTools();
 }
