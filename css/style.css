@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*#form-selection-main { */
+.selection {
+    padding: 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.dropdown {
+    padding: 1em;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    padding: 0.2em;
+}
+
+.dropdown-content {
+    position: absolute;
+    min-width: 80px;
+    z-index: 1;
+}
+
+.dropdown-list {
+    max-height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-entry {
+    text-decoration: none;
+    padding: 0.2em;
+    background-color: #f9f9f9;
+}
+
+.dropdown-entry:hover {
+    cursor: pointer;
+}
+
+.dropdown-entry-selected {
+    background-color: steelblue;
+    color: white;
+}
+
+#selection-main-events {
+    height: 100px;
+}
+
+#chart_area-line {
+    position: fixed;
+    padding: 1em;
+    top: 5.4em;
+    bottom: 0;
+    left: 0;
+    width: 68%;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
+}
+
+.chart_area-line-row {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+    flex-shrink: 0;
+}
+
+.chart-line {
+    padding: 1em;
+    flex-shrink: 0;
+}
+
+.chart-line-drag:hover {
+    cursor: pointer;
+}
+
+#chart_area-bar {
+    position: fixed;
+    top: 5.4em;
+    bottom: 0;
+    left: 72%;
+    right: 0;
+    overflow: auto;
+}
+
+.chart-bar-wrapper {
+    padding: 1em;
+}
+
+.axis_label {
+    font-size: 0.8em;
+}
+
+.legend {
+    font-size: 0.8em;
+}
+
+.legend-header {
+    text-align: center;
+}
+
+.legend-contents {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.legend-entry {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow: hidden;
+}
+
+.legend-color {
+    min-width: 0.8em;
+    height: 0.8em;
+    width: 0.8em;
+    margin-right: 1em;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

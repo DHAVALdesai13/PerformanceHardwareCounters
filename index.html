@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hardware Counter Visualization</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div id="central-vertical">
+    <div class="selection" id="selection-main">
+      <div class="dropdown">
+        <button class="dropdown-button" onclick="toggle_dropdown('selection-main-cores')">Select cores to display</button>
+        <div class="dropdown-content" id="selection-main-cores" style="display:none">
+          <div class="dropdown-list"></div>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-button" onclick="toggle_dropdown('selection-main-events')">Select events to display</button>
+        <div class="dropdown-content" id="selection-main-events" style="display:none">
+          <div class="dropdown-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="chart_area">
+      <div id="chart_area-line" class="chart_area-split"></div>
+
+      <div id="chart_area-bar" class="chart_area-split">
+
+        <div class="chart-bar-wrapper">
+          <div class="selection" id="selection-bar-core">
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="toggle_dropdown('selection-bar-core-core')">Select core</button>
+              <div class="dropdown-content" id="selection-bar-core-core" style="display:none">
+                <div class="dropdown-list"></div>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="toggle_dropdown('selection-bar-core-events')">Select events</button>
+              <div class="dropdown-content" id="selection-bar-core-events" style="display:none">
+                <div class="dropdown-list"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart_area-bar" id="chart_area-bar-core"></div>
+
+          <div class="legend" id="chart-bar-core-legend">
+            <h4 class="legend-header">LEGEND</h3>
+            <div class="legend-contents" id="chart-bar-core-legend-contents">
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-bar-wrapper">
+          <div class="selection" id="selection-bar-event">
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="toggle_dropdown('selection-bar-event-cores')">Select cores</button>
+              <div class="dropdown-content" id="selection-bar-event-cores" style="display:none">
+                <div class="dropdown-list"></div>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-button" onclick="toggle_dropdown('selection-bar-event-event')">Select event</button>
+              <div class="dropdown-content" id="selection-bar-event-event" style="display:none">
+                <div class="dropdown-list"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart_area-bar" id="chart_area-bar-event"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/visualization.js"></script>
+
+</body>
+
+</html>

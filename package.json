@@ -1,0 +1,21 @@
+{
+  "name": "RTS_vis",
+  "version": "0.0.1",
+  "description": "D3.js Visualization Library",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.gatech.edu/ddesai78/RTS_vis"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^11.0.2"
+  },
+  "dependencies": {
+    "d3": "^6.2.0"
+  }
+}
